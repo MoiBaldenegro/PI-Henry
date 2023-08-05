@@ -1,0 +1,37 @@
+{
+  "name": "pi-videogames-main",
+  "version": "1.0.0",
+  "description": "![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)",
+  "main": "index.js",
+  "dependencies": {
+    "asynckit": "^0.4.0",
+    "axios": "^1.4.0",
+    "combined-stream": "^1.0.8",
+    "csstype": "^3.1.2",
+    "delayed-stream": "^1.0.0",
+    "follow-redirects": "^1.15.2",
+    "form-data": "^4.0.0",
+    "hoist-non-react-statics": "^3.3.2",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "proxy-from-env": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "regenerator-runtime": "^0.13.11",
+    "scheduler": "^0.23.0",
+    "use-sync-external-store": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -10,8 +10,10 @@ const login = async (req, res) => {
 
     if (!user) return res.status(404).send("Usuario no encontrado");
 
+    const userid = user.id;
+
     return user.password === password
-      ? res.json({ access: true })
+      ? res.json({ access: true, userid })
       : res.status(403).send("Contraseña incorrecta");
   } catch (error) {
     res.status(500).json({ error: error.message });

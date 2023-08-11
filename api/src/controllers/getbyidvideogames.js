@@ -42,6 +42,7 @@ const getbyidvideogames = async (req, res) => {
         description: data.description,
         platforms: data.platforms.map((plat) => plat.platform.name),
         image: data.background_image,
+        genres: data.genres.map((gen) => gen.name),
       };
     }
 

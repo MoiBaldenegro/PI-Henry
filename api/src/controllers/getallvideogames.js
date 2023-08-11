@@ -1,28 +1,46 @@
 const axios = require("axios");
+const { async } = require("regenerator-runtime");
 const url = "https://api.rawg.io/api/games";
 require("dotenv").config();
 const { API_KEY } = process.env;
+const { Videogame, Genre } = require("../db");
 
 const getallvideogames = async (req, res) => {
   try {
-    // Obtenemos el número de página desde los query parameters
-    const page = req.query.page || 1;
+    let videogames = [];
+    const pages = [1];
 
-    // Realizamos una solicitud a la API externa usando axios
-    const response = await axios(`${url}?key=${API_KEY}&page=${page}`);
+    //Traigo los primeros 200 de la api
+    await Promise.all(
+      pages.map(async (page) => {
+        const games = await axios.get(`${url}?key=${API_KEY}&page=${page}`);
 
-    // Mapeamos la respuesta obtenida a un formato de objetos que necesitamos
-    const videoGames = response.data.results.map((data) => ({
-      id: data.id,
-      name: data.name,
-      releasedate: data.released,
-      rating: data.rating,
-      description: data.description,
-      platforms: data.platforms.map((plat) => plat.platform.name),
-      image: data.background_image,
-    }));
+        videogames.push(
+          ...games.data.results.map((data) => {
+            return {
+              id: data.id,
+              name: data.name,
+              releasedate: data.released,
+              rating: data.rating,
+              description: data.description,
+              platforms: data.platforms.map((plat) => plat.platform.name),
+              image: data.background_image,
+              genres: data.genres.map((gen) => gen.name),
+            };
+          })
+        );
+      })
+    );
 
-    res.status(200).json(videoGames);
+    //Traigo todos de la base de datos
+    const videogamesdb = await Videogame.findAll({
+      include: { model: Genre },
+    });
+
+    //Los junto y los muestro
+    videogames = [...videogamesdb, ...videogames];
+
+    res.status(200).json(videogames);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

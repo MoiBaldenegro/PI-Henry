@@ -8,7 +8,7 @@ const { Videogame, Genre } = require("../db");
 const getallvideogames = async (req, res) => {
   try {
     let videogames = [];
-    const pages = [1];
+    const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     //Traigo los primeros 200 de la api
     await Promise.all(

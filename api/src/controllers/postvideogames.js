@@ -52,7 +52,7 @@ const postvideogames = async (req, res) => {
       image,
       releasedate,
       rating,
-      genres,
+      gamegenres: genres,
     });
 
     // Asociar los géneros encontrados al nuevo videojuego

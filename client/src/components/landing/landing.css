@@ -1,0 +1,42 @@
+/* Estilos para el fondo gigante */
+.landing-container {
+  background-image: url("../../resources/wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.landing-container p {
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin-top: 60vh;
+  font-weight: bold;
+}
+
+.landing-container:hover::before {
+  opacity: 1;
+}
+
+.landing-container p:hover {
+  transform: scale(1.15);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}

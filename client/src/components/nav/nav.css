@@ -1,0 +1,40 @@
+.navbar {
+  background: linear-gradient(180deg, #000000, #190114);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.navbar button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.navbar button:hover {
+  font-size: 20px;
+}
+
+.navbar input[type="search"] {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.navbar img {
+  height: 55px;
+  margin-right: 20px;
+}
+
+.navbar-icon {
+  font-size: 25px;
+  cursor: pointer;
+}

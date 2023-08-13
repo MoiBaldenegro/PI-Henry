@@ -1,0 +1,137 @@
+/* Estilos generales para el formulario */
+.form-general {
+  height: 100vh;
+  background: linear-gradient(180deg, #6b1500, #56002f, #000000);
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+  width: 1200px;
+  min-height: 70vh;
+  max-height: 90vh;
+  margin-bottom: 15vh;
+  margin-top: 10vh;
+  background: linear-gradient(290deg, #f45229cd, #8d0b53c5, #190114c0);
+  color: white;
+  align-items: inherit;
+}
+
+/* Estilos para el lado izquierdo del formulario */
+.form-left {
+  width: 50%; /* Ajusta el tamaño según tus preferencias */
+  padding: 25px;
+}
+
+/* Estilos para el lado derecho del formulario */
+.form-right {
+  width: 50%;
+  padding: 25px;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+.form-container h1 {
+  margin-bottom: 50px;
+}
+
+.form-container input {
+  font-size: 18px;
+}
+
+.form-container input[type="text"] {
+  width: 90%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container input[type="date"] {
+  width: 40%;
+  padding: 5px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10%;
+  margin-right: 9%;
+}
+
+.form-container input[type="number"] {
+  width: 30%;
+  padding: 5px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 25%;
+  margin-right: 10%;
+}
+
+.form-container textarea {
+  width: 90%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.form-container span {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.form-container p {
+  color: red;
+  border: white;
+}
+
+/* Estilos para la sección de géneros */
+.form-container fieldset {
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-container legend {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-container input[type="checkbox"] {
+  margin-top: 20px;
+}
+
+.form-container button {
+  background-color: #007bff;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}

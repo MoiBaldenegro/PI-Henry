@@ -1,0 +1,74 @@
+/* Estilos generales para el formulario de registro */
+.formulario-container {
+  background-image: url("../../resources/wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario-container form {
+  border-radius: 10px;
+  height: 700px;
+  width: 50vh;
+  background: linear-gradient(290deg, #f45229cd, #8d0b53c5, #190114c0);
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-container img {
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.formulario-container label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.formulario-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 20px;
+  width: 320px;
+}
+
+.formulario-container p {
+  color: red;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.login {
+  color: rgb(0, 42, 255);
+  margin-bottom: 10px;
+}
+
+.formulario-container button {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  border: none;
+  transition: background-color 0.3s;
+  margin: 15px;
+}
+
+.formulario-container button:hover {
+  background-color: #0858b4;
+}

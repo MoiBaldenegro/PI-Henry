@@ -1,0 +1,49 @@
+/* Estilos para la sección de cards */
+.cards-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6vh;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+}
+
+/* Estilos para el contenedor de los botones */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para los botones */
+.buttons-container button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el botón deshabilitado */
+.buttons-container button:disabled {
+  background-color: #c7ccd7;
+  cursor: not-allowed;
+}
+
+.loader-container {
+  position: relative;
+  margin-top: 35vh;
+  margin-bottom: 35vh;
+  z-index: 10;
+}

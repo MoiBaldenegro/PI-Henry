@@ -1,0 +1,117 @@
+.detail-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.detail-container {
+  display: flex;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1500px;
+  height: 80%;
+  max-height: 2000px;
+  background: linear-gradient(290deg, #f45229cd, #8d0b53c5, #190114c0);
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.detail-right {
+  width: 50%;
+  max-width: 90%;
+  padding: 25px;
+  text-align: justify;
+  font-size: 2vmin;
+  overflow-wrap: break-word; /* Para ajustar las palabras en caso de que el texto sea largo */
+  hyphens: auto; /* División de palabras en varios renglones si es necesario */
+  transition: font-size 0.1s;
+}
+
+.detail-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-left h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.detail-left div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-image {
+  padding: 25px;
+  border-radius: 50px;
+  max-height: 400px;
+  max-width: 600px;
+  width: 35vw;
+  height: 40vw;
+}
+
+.detail-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(180deg, #000000bc, #190114c5);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+.detail-button:hover {
+  background: linear-gradient(180deg, #190114ca, #000000b5);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+  }
+
+  .detail-left h1,
+  .detail-left img,
+  .detail-left h3,
+  .detail-left h4 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .detail-image {
+    padding: 25px;
+    border-radius: 50px;
+    width: 60vw;
+    height: 40vw;
+  }
+
+  .detail-right {
+    height: 40%;
+    width: 100%;
+  }
+
+  .detail-left {
+    width: 80%;
+    height: 60%;
+  }
+}
